@@ -90,8 +90,13 @@ const HeroSectionWick = () => {
           </Typography>
         </motion.div>
 
+<<<<<<< HEAD
 
         <Typography variant="h6" sx={{ fontFamily: 'monospace', color: '#eeee2a' , boxShadow: '0 0 15px rgba(0, 188, 212, 0.3)', }}>
+=======
+      
+        <Typography variant="h6" sx={{ fontFamily: 'monospace', color: '#ffa500' }}>
+>>>>>>> daa0e6d4679fa9d6ca84b17e9b07bf33d09207af
           Analytical Mind. Creative Heart. 6 Years in Pharma QC | Code-Crafter by Passion.
         </Typography>
         <Typography variant="body2" sx={{ mt: 1, fontSize: '0.98rem', color: '#ccff00' }}>
