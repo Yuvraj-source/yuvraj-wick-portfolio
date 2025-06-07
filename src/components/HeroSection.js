@@ -90,30 +90,11 @@ const HeroSectionWick = () => {
           </Typography>
         </motion.div>
 
-        {/* Terminal-style intro animation */}
-        <Box sx={{ mt: 1, mb: 2 }}>
-          <TypeAnimation
-            sequence={[
-              '> Accessing dossier...',
-              1500,
-              '> Target: Yuvraj Salunke',
-              1500,
-              '> Status: Active',
-              1500,
-              '> Specialty: QC Microbiology & Front-End Intelligence',
-              1500,
-            ]}
-            wrapper="span"
-            speed={40}
-            style={{ fontSize: 'clamp(0.9rem, 1vw + 0.5rem, 1.2rem)', fontFamily: 'monospace', color: '#FFA500' }}
-            repeat={Infinity}
-          />
-        </Box>
 
-        <Typography variant="h6" sx={{ fontFamily: 'monospace', color: '#ffa500' }}>
+        <Typography variant="h6" sx={{ fontFamily: 'monospace', color: '#eeee2a' , boxShadow: '0 0 15px rgba(0, 188, 212, 0.3)', }}>
           Analytical Mind. Creative Heart. 6 Years in Pharma QC | Code-Crafter by Passion.
         </Typography>
-        <Typography variant="body2" sx={{ mt: 1, fontSize: '0.95rem', color: '#888' }}>
+        <Typography variant="body2" sx={{ mt: 1, fontSize: '0.98rem', color: '#ccff00' }}>
           Dive into this portfolio — a blend of precision and aesthetics. Let’s connect and innovate together.
         </Typography>
 
@@ -164,7 +145,7 @@ const HeroSectionWick = () => {
           px: 3,
           py: 2,
           mt: 4,
-          fontSize: '1rem',
+          fontSize: '0.98rem',
           fontFamily: 'monospace',
           color: '#ccc',
           boxShadow: '0 0 15px rgba(0, 255, 255, 0.2)'
@@ -175,8 +156,8 @@ const HeroSectionWick = () => {
               2000,
               'Si vis pacem, para bellum',
               2000,
-              'Those who cling to death, live. Those who cling to life, die',
-              2000
+              "If you want peace, prepare for war", 
+              2000,
             ]}
             wrapper="span"
             speed={40}

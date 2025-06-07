@@ -48,7 +48,7 @@ const Footer = () => {
       </Box>
 
       <Typography variant="body2" sx={{ fontSize: '0.8rem' }}>
-        © 2025 Yuvraj S. — Crafted in <strong>Wick Mode</strong>
+        © 2025 Yuvi's — Crafted in <strong>Wick Mode</strong>
       </Typography>
     </Box>
   );

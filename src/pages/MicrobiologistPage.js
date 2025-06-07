@@ -11,7 +11,9 @@ const MicrobiologistWickPage = () => {
       description: [
         "Isolated, characterized, and identified microorganisms from pharmaceutical and environmental sources.",
         "Maintained in-house microbial isolates with regular subculturing and tracking.",
-        "Compiled quarterly reports on microbial trends, supporting internal audits and quality reviews."
+        "Compiled quarterly reports on microbial trends, supporting internal audits and quality reviews.",
+        "Revised microbial ID documentation and TDS, enabling a 2× increase in sample processing capacity."
+
       ]
     },
     {
@@ -121,7 +123,7 @@ const MicrobiologistWickPage = () => {
         <Grid container spacing={3}>
           <Grid item xs={12} md={4}>
             <Paper elevation={4} sx={{ background: '#111', color: '#00e5ff', p: { xs: 2, md: 3 } }}>
-              <Typography fontWeight={600}>🧫 Tests Conducted</Typography>
+              <Typography fontWeight={600} sx={{ color: '#f27b42' }}>🧫 Tests Conducted</Typography>
               <ul>
                 <li>BET (Gel Clot & KTA)</li>
                 <li>Sterility Testing</li>
@@ -150,7 +152,7 @@ const MicrobiologistWickPage = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <Paper elevation={4} sx={{ background: '#111', color: '#00e5ff', p: { xs: 2, md: 3 } }}>
-              <Typography fontWeight={600}>💻 Software</Typography>
+              <Typography fontWeight={600} sx={{ color: '#f27b42' }}>💻 Software</Typography>
               <ul>
                 <li>LIMS Labware 7</li>
                 <li>Caliber eLog</li>
@@ -165,14 +167,16 @@ const MicrobiologistWickPage = () => {
         <Typography variant="h5" gutterBottom>🧪 Career Timeline</Typography>
         <Grid container spacing={3}>
           {careerData.map((item, idx) => (
-            <Grid item xs={12} key={idx}>
+            <Grid item xs={12} md={12} key={idx}>
               <Paper elevation={3} sx={{ background: '#151515', borderLeft: '4px solid #00bcd4', position: 'relative', p: { xs: 2, md: 3 } }}>
-                <Typography variant="h6">{item.title}</Typography>
-                <Typography variant="body2" color="#ccc">{item.duration}</Typography>
+                <Typography variant="h5">{item.title}</Typography>
+               <Typography variant="body1" sx={{ fontSize: '1.1rem', color: '#ccc' }}>
+  {item.duration}
+</Typography>
                 <ul style={{ marginTop: 8, paddingLeft: 20 }}>
                   {item.description.map((point, i) => (
                     <li key={i}>
-                      <Typography variant="body2" color="#eee">{point}</Typography>
+                      <Typography variant="body2" sx={{ fontSize: '1.1rem', color:"#eee"}} >{point}</Typography>
                     </li>
                   ))}
                 </ul>
@@ -189,21 +193,43 @@ const MicrobiologistWickPage = () => {
           transition={{ delay: 1, duration: 1 }}
           style={{ zIndex: 2 }}
         >
-          <Typography variant="h5" gutterBottom>🏅 Audit Highlights</Typography>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
-              <Paper elevation={3} sx={{ background: '#181818', borderLeft: '4px solid #4caf50', p: { xs: 2, md: 3 } }}>
-                <Typography fontWeight={600}>✔️ Zero Critical Observations</Typography>
-                <Typography>Successfully demonstrated BET and Sterility Testing during USFDA audit led by Cynthia Jim.</Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Paper elevation={3} sx={{ background: '#181818', borderLeft: '4px solid #4caf50', p: { xs: 2, md: 3 } }}>
-                <Typography fontWeight={600}>📘 SOP Contributor</Typography>
-                <Typography>Revised and validated SOPs for BET and Sterility to strengthen audit preparedness and data integrity.</Typography>
-              </Paper>
-            </Grid>
-          </Grid>
+      
+         {/* Audit Highlights */}
+<Typography variant="h5" gutterBottom>🏅 Audit Highlights</Typography>
+<Grid container spacing={3}>
+  <Grid item xs={12} md={6}>
+    <Paper elevation={3} sx={{ background: '#181818', borderLeft: '4px solid #4caf50', p: { xs: 2, md: 3 } }}>
+      <Typography fontWeight={600} sx={{ fontSize: '1.1rem'}}>✔️ Zero Critical Observations</Typography>
+      <Typography>
+        Successfully demonstrated BET and Sterility Testing during USFDA audit led by Cynthia Jim.
+      </Typography>
+    </Paper>
+  </Grid>
+  <Grid item xs={12} md={6}>
+    <Paper elevation={3} sx={{ background: '#181818', borderLeft: '4px solid #4caf50', p: { xs: 2, md: 3 } }}>
+      <Typography fontWeight={600} sx={{ fontSize: '1.1rem'}}>🕵️‍♂️ Audits Faced</Typography>
+      <Typography sx={{ fontSize: '1rem'}}>
+        Participated in multiple regulatory audits including USFDA, WHO, and internal QA reviews with compliance success.
+      </Typography>
+    </Paper>
+  </Grid>
+</Grid>
+
+<Divider sx={{ my: 5, bgcolor: '#00bcd4' }} />
+
+{/* Certifications */}
+<Typography variant="h5" gutterBottom >🎓 Certifications</Typography>
+<Grid container spacing={3}>
+  <Grid item xs={12} md={6}>
+    <Paper elevation={3} sx={{ background: '#181818', borderLeft: '4px solid #2196f3', p: { xs: 2, md: 3 } }}>
+      <Typography fontWeight={600} sx={{ fontSize: '1.1rem'}}>📜 Advanced Program in Clinical Research and Management</Typography>
+      <Typography>
+        Completed specialized training covering clinical studies , pharmacovigilance and clinical data management.
+      </Typography>
+    </Paper>
+  </Grid>
+</Grid>
+
         </motion.div>
       </Box>
     </Box>

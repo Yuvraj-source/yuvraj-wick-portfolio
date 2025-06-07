@@ -2,31 +2,37 @@ import React from 'react';
 import { Box, Typography, Divider, Grid, Paper, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import watermark from '../assets/BloodOath-product1.webp';
+import microverseImg from '../assets/microverse-img.png';
+import cloudKitchen from '../assets/cloudKitchen.png';
+import importExport from '../assets/import-export.png';
+
 
 const DeveloperWickPage = () => {
   const projects = [
     {
       name: 'Microverse',
       desc: 'A biotech ecosystem portal with study hubs, mentorship, and more.',
-      github: '#',
-      live: '#'
+      github: '',
+      live: 'https://spiffy-babka-74494a.netlify.app/',
+       image: microverseImg
     },
     {
-      name: 'Catchy Cloud',
-      desc: 'E-commerce frontend for organic handmade products.',
+      name: 'Foodie',
+      desc: 'Cloud kitchen landing page for food ordering.',
       github: '#',
-      live: '#'
+      live: 'https://timely-jelly-5304b3.netlify.app/',
+       image: cloudKitchen
     },
     {
-      name: 'Portfolio Wick Mode',
+      name: 'Export Company',
       desc: 'Interactive, John Wick-inspired animated portfolio.',
-      github: '#',
-      live: '#'
+      github: 'https://neon-khapse-3698b3.netlify.app/',
+      live: '#',
+       image: importExport
     }
   ];
 
-  const stack = ['HTML', 'CSS', 'JavaScript', 'React.js', 'Material UI', 'Framer Motion', 'Firebase', 'GitHub'];
+  const stack = ['HTML', 'CSS', 'JavaScript', 'React.js', 'Material UI', 'Framer Motion', 'Firebase', 'GitHub','Bootstrap'];
 
   return (
     <Box
@@ -94,23 +100,86 @@ const DeveloperWickPage = () => {
 
         <Divider sx={{ my: 5, bgcolor: '#00bcd4' }} />
 
+        <Typography variant="h5" gutterBottom>🎯 Field Ops Log (Internship)</Typography>
+<Grid container spacing={3}>
+  <Grid item xs={12}>
+    <Paper elevation={4} sx={{ background: '#181818', borderLeft: '4px solid #f57c00', p: { xs: 2, md: 3 } }}>
+      <Typography fontWeight={600} sx={{fontSize: '1.1 rem'}} color="#ffa726">
+        Web Development Intern (Remote)
+      </Typography>
+      <Typography variant="body2" color="#ccc"  sx={{fontSize: '1rem'}}>
+        Creative I Digital Agency, Erode, Tamil Nadu — Duration: 3 Months
+      </Typography>
+      <Typography variant="body2" sx={{ mt: 1, color: '#aaa' , fontSize:'1rem'}}>
+        Contributed to responsive front-end development, integrated real-time UI components, and optimized performance for client websites and dashboards under professional supervision.
+      </Typography>
+    </Paper>
+  </Grid>
+</Grid>
+
         {/* Project Panels */}
-        <Typography variant="h5" gutterBottom>🗂️ Mission Access Panels</Typography>
-        <Grid container spacing={3}>
-          {projects.map((proj, idx) => (
-            <Grid item xs={12} md={4} key={idx}>
-              <Paper elevation={4} sx={{ background: '#1a1a1a', border: '1px solid #333', position: 'relative', p: { xs: 2, md: 3 } }}>
-                <img src={watermark} alt="seal" style={{ position: 'absolute', bottom: 10, right: 10, width: 45, opacity: 0.9 }} />
-                <Typography variant="h6" color="#00e5ff">{proj.name}</Typography>
-                <Typography variant="body2" sx={{ mt: 1 }}>{proj.desc}</Typography>
-                <Box sx={{ display: 'flex', gap: 2, mt: 2, flexWrap: 'wrap' }}>
-                  <Button size="small" variant="outlined" href={proj.github} sx={{ borderColor: '#00bcd4', color: '#00bcd4', '&:hover': { borderColor: '#00e5ff' } }}>GitHub</Button>
-                  <Button size="small" variant="outlined" href={proj.live} sx={{ borderColor: '#00bcd4', color: '#00bcd4', '&:hover': { borderColor: '#00e5ff' } }}>Live</Button>
-                </Box>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
+        <Typography variant="h5" gutterBottom sx={{mt:3}}>🗂️ Mission Access Panels</Typography>
+       <Grid container spacing={3}>
+  {projects.map((proj, idx) => (
+    <Grid item xs={12} md={4} key={idx}>
+      <Paper
+        elevation={4}
+        sx={{
+          background: '#1a1a1a',
+          border: '1px solid #333',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          p: { xs: 2, md: 3 },
+          minHeight: '450px' // Adjust height as needed
+        }}
+      >
+        <Typography variant="h6" color="#00e5ff" sx={{ mb: 1 }}>
+          {proj.name}
+        </Typography>
+
+        <Box
+          component="img"
+          src={proj.image}
+          alt={proj.name}
+          sx={{
+            width: '100%',
+            height: 180,
+            objectFit: 'cover',
+            borderRadius: 1,
+            border: '1px solid #444',
+            mb: 2
+          }}
+        />
+
+        <Typography variant="body2" sx={{ color: '#ccc', flexGrow: 1 }}>
+          {proj.desc}
+        </Typography>
+
+        <Box sx={{ display: 'flex', gap: 2, mt: 2, flexWrap: 'wrap' }}>
+          <Button
+            size="small"
+            variant="outlined"
+            href={proj.github}
+            sx={{ borderColor: '#00bcd4', color: '#00bcd4', '&:hover': { borderColor: '#00e5ff' } }}
+          >
+            GitHub
+          </Button>
+          <Button
+            size="small"
+            variant="outlined"
+            href={proj.live}
+            sx={{ borderColor: '#00bcd4', color: '#00bcd4', '&:hover': { borderColor: '#00e5ff' } }}
+          >
+            Live
+          </Button>
+        </Box>
+      </Paper>
+    </Grid>
+  ))}
+</Grid>
+
       </Box>
     </Box>
   );

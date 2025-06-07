@@ -58,7 +58,7 @@ const Header = () => {
               textShadow: '0 0 8px rgba(0,229,255,0.6)'
             }}
           >
-             Surveillance Active · Operative: Yuvraj S.
+             Surveillance Active · Operative: YUVRAJ
           </Typography>
         </Box>
 
