@@ -90,26 +90,7 @@ const HeroSectionWick = () => {
           </Typography>
         </motion.div>
 
-        {/* Terminal-style intro animation */}
-        <Box sx={{ mt: 1, mb: 2 }}>
-          <TypeAnimation
-            sequence={[
-              '> Accessing dossier...',
-              1500,
-              '> Target: Yuvraj Salunke',
-              1500,
-              '> Status: Active',
-              1500,
-              '> Specialty: QC Microbiology & Front-End Intelligence',
-              1500,
-            ]}
-            wrapper="span"
-            speed={40}
-            style={{ fontSize: 'clamp(0.9rem, 1vw + 0.5rem, 1.2rem)', fontFamily: 'monospace', color: '#FFA500' }}
-            repeat={Infinity}
-          />
-        </Box>
-
+      
         <Typography variant="h6" sx={{ fontFamily: 'monospace', color: '#ffa500' }}>
           Analytical Mind. Creative Heart. 6 Years in Pharma QC | Code-Crafter by Passion.
         </Typography>
