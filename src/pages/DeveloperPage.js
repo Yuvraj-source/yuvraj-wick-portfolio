@@ -6,33 +6,32 @@ import microverseImg from '../assets/microverse-img.png';
 import cloudKitchen from '../assets/cloudKitchen.png';
 import importExport from '../assets/import-export.png';
 
-
 const DeveloperWickPage = () => {
   const projects = [
     {
       name: 'Microverse',
-      desc: 'A biotech ecosystem portal with study hubs, mentorship, and more.',
+      desc: 'An all-in-one biotechnology portal tailored for students and professionals. Microverse offers access to study materials, discussion forums, mentorship booking, career updates, and more — all with a sleek, John Wick-inspired interface.',
       github: '',
       live: 'https://spiffy-babka-74494a.netlify.app/',
-       image: microverseImg
+      image: microverseImg
     },
     {
       name: 'Foodie',
-      desc: 'Cloud kitchen landing page for food ordering.',
+      desc: 'A responsive landing page for a fictional cloud kitchen brand offering traditional Indian meals. Designed with clarity and user flow in mind, the interface prioritizes intuitive navigation and high conversion potential.' ,
       github: '#',
       live: 'https://timely-jelly-5304b3.netlify.app/',
-       image: cloudKitchen
+      image: cloudKitchen
     },
     {
       name: 'Export Company',
-      desc: 'Interactive, John Wick-inspired animated portfolio.',
+      desc: 'A clean and professional website for an agricultural export firm. Emphasizes credibility and clarity while highlighting India’s global role in food exports.',
       github: 'https://neon-khapse-3698b3.netlify.app/',
       live: '#',
-       image: importExport
+      image: importExport
     }
   ];
 
-  const stack = ['HTML', 'CSS', 'JavaScript', 'React.js', 'Material UI', 'Framer Motion', 'Firebase', 'GitHub','Bootstrap'];
+  const stack = ['HTML', 'CSS', 'JavaScript', 'React.js', 'Material UI', 'Framer Motion', 'Firebase', 'GitHub', 'Bootstrap'];
 
   return (
     <Box
@@ -53,19 +52,33 @@ const DeveloperWickPage = () => {
     >
       <Box>
         {/* Scanlines */}
-        <Box sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundImage: 'repeating-linear-gradient(to bottom, rgba(255,255,255,0.02) 0, transparent 2px, transparent 6px)',
-          pointerEvents: 'none',
-          zIndex: 1
-        }} />
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundImage: 'repeating-linear-gradient(to bottom, rgba(255,255,255,0.02) 0, transparent 2px, transparent 6px)',
+            pointerEvents: 'none',
+            zIndex: 1
+          }}
+        />
 
         <motion.div initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} style={{ zIndex: 2 }}>
-          <Typography variant="caption" sx={{ backgroundColor: '#00bcd4', color: '#000', px: 2, py: 0.5, borderRadius: 1, fontFamily: 'monospace', mb: 2, display: 'inline-block' }}>
+          <Typography
+            variant="caption"
+            sx={{
+              backgroundColor: '#00bcd4',
+              color: '#000',
+              px: 2,
+              py: 0.5,
+              borderRadius: 1,
+              fontFamily: 'monospace',
+              mb: 2,
+              display: 'inline-block'
+            }}
+          >
             ... SUBJECT IDENTIFIED: FRONT-END DEVELOPER
           </Typography>
         </motion.div>
@@ -86,12 +99,12 @@ const DeveloperWickPage = () => {
 
         <Divider sx={{ my: 5, bgcolor: '#00bcd4' }} />
 
-        {/* Tech Stack as Weapon Arsenal */}
+        {/* Tech Stack */}
         <Typography variant="h5" gutterBottom>🫨 Weapon Arsenal (Tech Stack)</Typography>
         <Grid container spacing={2}>
           {stack.map((tech, index) => (
-            <Grid item xs={6} md={3} key={index}>
-              <Paper elevation={4} sx={{ background: '#111', color: '#0ff', textAlign: 'center', fontWeight: 600, p: { xs: 2, md: 3 } }}>
+            <Grid item xs={6} sm={4} md={3} key={index}>
+              <Paper elevation={4} sx={{ background: '#111', color: '#0ff', textAlign: 'center', fontWeight: 600, p: 2 }}>
                 {tech}
               </Paper>
             </Grid>
@@ -100,45 +113,46 @@ const DeveloperWickPage = () => {
 
         <Divider sx={{ my: 5, bgcolor: '#00bcd4' }} />
 
+        {/* Internship */}
         <Typography variant="h5" gutterBottom>🎯 Field Ops Log (Internship)</Typography>
-<Grid container spacing={3}>
-  <Grid item xs={12}>
-    <Paper elevation={4} sx={{ background: '#181818', borderLeft: '4px solid #f57c00', p: { xs: 2, md: 3 } }}>
-      <Typography fontWeight={600} sx={{fontSize: '1.1 rem'}} color="#ffa726">
-        Web Development Intern (Remote)
-      </Typography>
-      <Typography variant="body2" color="#ccc"  sx={{fontSize: '1rem'}}>
-        Creative I Digital Agency, Erode, Tamil Nadu — Duration: 3 Months
-      </Typography>
-      <Typography variant="body2" sx={{ mt: 1, color: '#aaa' , fontSize:'1rem'}}>
-        Contributed to responsive front-end development, integrated real-time UI components, and optimized performance for client websites and dashboards under professional supervision.
-      </Typography>
-    </Paper>
-  </Grid>
-</Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Paper elevation={4} sx={{ background: '#181818', borderLeft: '4px solid #f57c00', p: 3 }}>
+              <Typography fontWeight={600} sx={{ fontSize: '1.1rem' }} color="#ffa726">
+                Web Development Intern (Remote)
+              </Typography>
+              <Typography variant="body2" color="#ccc" sx={{ fontSize: '1rem' }}>
+                Creative I Digital Agency, Erode, Tamil Nadu — Duration: 3 Months
+              </Typography>
+              <Typography variant="body2" sx={{ mt: 1, color: '#aaa', fontSize: '1rem' }}>
+                Contributed to responsive front-end development, integrated real-time UI components, and optimized performance for client websites and dashboards under professional supervision.
+              </Typography>
+            </Paper>
+          </Grid>
+        </Grid>
 
-        {/* Project Panels */}
-        <Typography variant="h5" gutterBottom sx={{mt:3}}>🗂️ Mission Access Panels</Typography>
-       <Grid container spacing={3}>
+        <Divider sx={{ my: 5, bgcolor: '#00bcd4' }} />
+
+        {/* Projects */}
+       <Grid container spacing={3} justifyContent="center">
   {projects.map((proj, idx) => (
-    <Grid item xs={12} md={4} key={idx}>
+    <Grid item xs={12} sm={6} key={idx}>
       <Paper
         elevation={4}
         sx={{
           background: '#1a1a1a',
           border: '1px solid #333',
-          height: '100%',
+          borderRadius: 2,
+          width: '100%',
+          maxWidth: 550,
+          height: 420,
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-between',
-          p: { xs: 2, md: 3 },
-          minHeight: '450px' // Adjust height as needed
+          overflow: 'hidden',
+          mx: 'auto'
         }}
       >
-        <Typography variant="h6" color="#00e5ff" sx={{ mb: 1 }}>
-          {proj.name}
-        </Typography>
-
+        {/* Image */}
         <Box
           component="img"
           src={proj.image}
@@ -147,38 +161,69 @@ const DeveloperWickPage = () => {
             width: '100%',
             height: 180,
             objectFit: 'cover',
-            borderRadius: 1,
-            border: '1px solid #444',
-            mb: 2
+            borderBottom: '1px solid #444',
           }}
         />
 
-        <Typography variant="body2" sx={{ color: '#ccc', flexGrow: 1 }}>
-          {proj.desc}
-        </Typography>
+        {/* Content */}
+        <Box sx={{ p: 2, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <Typography variant="h6" color="#00e5ff" sx={{ mb: 1 }}>
+            {proj.name}
+          </Typography>
 
-        <Box sx={{ display: 'flex', gap: 2, mt: 2, flexWrap: 'wrap' }}>
-          <Button
-            size="small"
-            variant="outlined"
-            href={proj.github}
-            sx={{ borderColor: '#00bcd4', color: '#00bcd4', '&:hover': { borderColor: '#00e5ff' } }}
+          <Typography
+            variant="body2"
+            sx={{
+              color: '#ccc',
+              flexGrow: 1,
+              fontSize: '0.9rem',
+              mb: 2,
+              overflow: 'hidden',
+              textOverflow: 'ellipsis'
+            }}
           >
-            GitHub
-          </Button>
-          <Button
-            size="small"
-            variant="outlined"
-            href={proj.live}
-            sx={{ borderColor: '#00bcd4', color: '#00bcd4', '&:hover': { borderColor: '#00e5ff' } }}
-          >
-            Live
-          </Button>
+            {proj.desc}
+          </Typography>
+
+          <Box sx={{ display: 'flex', gap: 1 }}>
+            <Button
+              size="small"
+              variant="outlined"
+              href={proj.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                borderColor: '#00bcd4',
+                color: '#00bcd4',
+                textTransform: 'none',
+                '&:hover': { borderColor: '#00e5ff', color: '#00e5ff' }
+              }}
+            >
+              GitHub
+            </Button>
+            <Button
+              size="small"
+              variant="outlined"
+              href={proj.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                borderColor: '#00bcd4',
+                color: '#00bcd4',
+                textTransform: 'none',
+                '&:hover': { borderColor: '#00e5ff', color: '#00e5ff' }
+              }}
+            >
+              Live
+            </Button>
+          </Box>
         </Box>
       </Paper>
     </Grid>
   ))}
 </Grid>
+
+
 
       </Box>
     </Box>

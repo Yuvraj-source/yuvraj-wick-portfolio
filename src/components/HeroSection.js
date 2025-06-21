@@ -90,18 +90,11 @@ const HeroSectionWick = () => {
           </Typography>
         </motion.div>
 
-<<<<<<< HEAD
 
         <Typography variant="h6" sx={{ fontFamily: 'monospace', color: '#eeee2a' , boxShadow: '0 0 15px rgba(0, 188, 212, 0.3)', }}>
-=======
-      
-        <Typography variant="h6" sx={{ fontFamily: 'monospace', color: '#ffa500' }}>
->>>>>>> daa0e6d4679fa9d6ca84b17e9b07bf33d09207af
           Analytical Mind. Creative Heart. 6 Years in Pharma QC | Code-Crafter by Passion.
         </Typography>
-        <Typography variant="body2" sx={{ mt: 1, fontSize: '0.98rem', color: '#ccff00' }}>
-          Dive into this portfolio — a blend of precision and aesthetics. Let’s connect and innovate together.
-        </Typography>
+      
 
         {/* Buttons */}
         <Box sx={{ display: 'flex', gap: 4, mt: 3, zIndex: 2 ,flexDirection: { xs: 'column', sm: 'row' } }}>
@@ -150,7 +143,7 @@ const HeroSectionWick = () => {
           px: 3,
           py: 2,
           mt: 4,
-          fontSize: '0.98rem',
+          fontSize: '0.95rem',
           fontFamily: 'monospace',
           color: '#ccc',
           boxShadow: '0 0 15px rgba(0, 255, 255, 0.2)'
@@ -166,7 +159,7 @@ const HeroSectionWick = () => {
             ]}
             wrapper="span"
             speed={40}
-            style={{ fontSize: 'clamp(0.95rem, 1vw + 0.5rem, 1.3rem)', fontWeight: 400, marginTop: '20px', color: '#aaa' }}
+            style={{ fontSize: 'clamp(0.95rem, 1vw + 0.5rem, 1.3rem)', fontWeight: 400, marginTop: '18px', color: '#aaa' }}
             repeat={Infinity}
           />
         </Box>
@@ -192,6 +185,10 @@ const HeroSectionWick = () => {
             🔥 WICK MODE ACTIVATED
           </Typography>
         )}
+
+          <Typography variant="body2" sx={{ mt: 2, fontSize: '0.98rem', color: '#ccff00' }}>
+          Dive into this portfolio — a blend of precision and aesthetics. Let’s connect and innovate together.
+        </Typography>
 
       </Box>
     </Fade>

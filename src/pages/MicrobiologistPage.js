@@ -9,9 +9,9 @@ const MicrobiologistWickPage = () => {
       title: "Executive – Enzene Biosciences Ltd",
       duration: "📍 Pune | 🗓️ 2024 – Present",
       description: [
-        "Isolated, characterized, and identified microorganisms from pharmaceutical and environmental sources.",
+        "Isolated, characterized, and identified microorganisms from various sources.",
         "Maintained in-house microbial isolates with regular subculturing and tracking.",
-        "Compiled quarterly reports on microbial trends, supporting internal audits and quality reviews.",
+        "Compiled monthly reports on microbial trends, supporting internal audits and quality reviews.",
         "Revised microbial ID documentation and TDS, enabling a 2× increase in sample processing capacity."
 
       ]
@@ -146,13 +146,13 @@ const MicrobiologistWickPage = () => {
                 <li>Liquid Counter: HIAC 9703</li>
                 <li>Dry Heating Block: Equichem</li>
                 <li>Glove Integrity Tester: SKAN WirelessGT 2</li>
-                <li>Sterility Test Isolator</li>
+                <li>Sterility Test Isolator </li>
               </ul>
             </Paper>
           </Grid>
           <Grid item xs={12} md={4}>
             <Paper elevation={4} sx={{ background: '#111', color: '#00e5ff', p: { xs: 2, md: 3 } }}>
-              <Typography fontWeight={600} sx={{ color: '#f27b42' }}>💻 Software</Typography>
+              <Typography fontWeight={600} sx={{ color: '#f27b42' }}>💻 Software and Tools</Typography>
               <ul>
                 <li>LIMS Labware 7</li>
                 <li>Caliber eLog</li>
@@ -209,7 +209,7 @@ const MicrobiologistWickPage = () => {
     <Paper elevation={3} sx={{ background: '#181818', borderLeft: '4px solid #4caf50', p: { xs: 2, md: 3 } }}>
       <Typography fontWeight={600} sx={{ fontSize: '1.1rem'}}>🕵️‍♂️ Audits Faced</Typography>
       <Typography sx={{ fontSize: '1rem'}}>
-        Participated in multiple regulatory audits including USFDA, WHO, and internal QA reviews with compliance success.
+        Participated in multiple regulatory audits including USFDA, WHO, EMA and various regulatory audits with compliance success.
       </Typography>
     </Paper>
   </Grid>
