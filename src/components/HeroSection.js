@@ -156,6 +156,8 @@ const HeroSectionWick = () => {
               2000,
               "If you want peace, prepare for war", 
               2000,
+              "In every end, there is a new beginning. ",
+              2000,
             ]}
             wrapper="span"
             speed={40}
